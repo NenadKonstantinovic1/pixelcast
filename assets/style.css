@@ -1,0 +1,707 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Ubuntu", sans-serif;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav.navbar,
+.navbar.navbar-expand-lg {
+    background-color: #12116f;
+    margin: 0px auto;
+    text-shadow: 0.5px 0.5px black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul li{
+    font-size: 20px;
+    margin:0px 10px;
+    color:white;
+}
+
+#logo{
+    font-size: 30px;
+    padding:5px;
+    margin-right: 10px;
+    border: 3px solid white;
+    border-radius: 2px;
+}
+
+.navbar-brand {
+    margin-left: 50px;
+}
+
+.navbar-nav {
+    margin-right: 40px;
+}
+
+.navbar-nav .nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    
+    transform: scale(1.2);
+}
+
+.header-2{
+    background-color: #201daa;
+    color:white;
+    padding: 6px 0px;
+}
+
+.header-2 h2{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bolded-text {
+    font-weight: 700;
+}
+
+.main{
+    min-height: 150px;
+    background-color: #201daa;
+    padding: 10px 0 10px 0;
+}
+
+.filter-sort-container {
+    background-color: #12116f;
+    border: 2px solid #12116f;
+}
+
+.filter-sort-toggle {
+    user-select: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.filter-sort-toggle i {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.filter-sort-toggle.active i {
+    transform: rotate(180deg);
+}
+
+.filter-sort-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0;
+}
+
+.filter-sort-content.active {
+    max-height: 500px;
+    padding-top: 20px;
+}
+
+.filter-btn {
+    margin: 5px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.filter-btn:hover {
+    background-color: #201daa;
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: #201daa;
+    border-color: white;
+    color: white;
+}
+
+#sortSelect {
+    background-color: #12116f;
+    color: white;
+    border: 2px solid white;
+}
+
+
+.sort-select {
+    max-width: 300px;
+}
+
+.click-info-text {
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.facts-title {
+    font-size: 24px;
+}
+
+
+.form-message {
+    display: block;
+}
+
+.form-message-hidden {
+    display: none;
+}
+
+.console-count {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.facts {
+    background-color: #201daa;
+    min-height: 250px;
+    padding: 20px 0 40px 0;
+}
+
+.facts-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.facts-arrow {
+    background-color: #12116f;
+    border: 3px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.facts-arrow:hover {
+    background-color: #201daa;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.facts-arrow:active {
+    transform: scale(0.95);
+}
+
+.facts-card {
+    background-color: #12116f;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 30px;
+    min-height: 150px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.facts-text {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.facts-text.fade-in {
+    opacity: 1;
+}
+
+.facts-text.fade-out {
+    opacity: 0;
+}
+
+footer {
+    background-color: #12116f;
+}
+
+.icons a i{
+    font-size:22px;
+    padding: 5px 5px;
+    transition: transform 0.3s ease;
+}
+
+.icons a:hover i{
+    transform: scale(1.2);
+}
+
+.icons a{
+    text-decoration: none;
+}
+
+.icons{
+    display:block;
+    text-align: center;
+    text-shadow: 0.5px 0.5px black;
+}
+
+.console-wrapper {
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+
+.flip-card {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: transparent;
+}
+
+.flip-card-back {
+    background-color: rgba(18, 17, 111, 0.95);
+    border: 10px ridge #12116f;
+    transform: rotateY(180deg);
+    overflow: hidden;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.console-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px ridge #12116f;
+    display: block;
+}
+
+.details-content {
+    color: white;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.details-title {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+}
+
+.details-info {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.details-info strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.details-games {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.details-games .details-info {
+    margin-bottom: 3px;
+}
+
+.games-list {
+    list-style-type: disc;
+    padding-left: 16px;
+    margin-top: 3px;
+    margin-bottom: 0;
+}
+
+.games-list li {
+    color: #e0e0e0;
+    font-size: 12px;
+    line-height: 1.3;
+    padding-left: 0;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.details-description {
+    color: #e0e0e0;
+    font-size: 12px;
+    line-height: 1.3;
+    margin-top: 6px;
+    text-align: justify;
+}
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #12116f;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top-btn:hover {
+    background-color: #201daa;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Author page styles */
+.author-image-col {
+    padding-right: 20px;
+}
+.author-email {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}   
+.author-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border: 10px ridge #12116f;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.author-text-col {
+    padding-left: 20px;
+}
+
+.author-text {
+    color: white;
+    font-size: 28px;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #12116f;
+    padding: 20px;
+}
+
+.back-to-top-btn.show {
+    display: flex;
+}
+
+.contact-form-container {
+    background-color: #12116f;
+    border: 2px solid #12116f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-container .text-danger.text-danger {
+    color: white;
+}
+
+.contact-input {
+    background-color: #12116f;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    background-color: #201daa;
+    border-color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.contact-input textarea,
+textarea.contact-input {
+    resize: vertical;
+    min-height: 120px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.contact-submit-btn {
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-width: 2px;
+}
+
+.contact-submit-btn:hover {
+    background-color: #201daa;
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Form Message Styles */
+.form-message {
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 2px solid;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.form-message p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.form-message-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-color: #28a745;
+    color: #d4edda;
+}
+
+.form-message-error {
+    background-color: rgba(220, 53, 69, 0.2);
+    border-color: #dc3545;
+    color: #f8d7da;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #logo {
+        font-size: 24px;
+        padding: 3px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .header-2 h2 {
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+    
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .flip-card {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .flip-card-back {
+        padding: 10px;
+        border-width: 8px;
+    }
+    
+    .details-title {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    .details-info {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+    
+    .details-description {
+        font-size: 9px;
+        margin-top: 5px;
+    }
+    
+    .games-list li {
+        font-size: 9px;
+        line-height: 1.2;
+    }
+    
+    .contact-form-container {
+        padding: 20px;
+    }
+    
+    .contact-submit-btn {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+    
+    .form-message p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    #logo {
+        font-size: 20px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    
+    .header-2 h2 {
+        font-size: 14px;
+    }
+    
+    .filter-sort-container {
+        padding: 15px;
+    }
+    
+    .filter-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+        margin: 3px;
+    }
+    
+    .flip-card {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .flip-card-back {
+        padding: 8px;
+    }
+    
+    .details-title {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .details-info {
+        font-size: 9px;
+        margin-bottom: 2px;
+    }
+    
+    .details-description {
+        font-size: 8px;
+        margin-top: 4px;
+    }
+    
+    .games-list li {
+        font-size: 8px;
+        line-height: 1.2;
+    }
+    
+    .facts-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .facts-container {
+        gap: 8px;
+        padding: 10px;
+    }
+    
+    .facts-card {
+        padding: 15px;
+        min-height: 120px;
+    }
+    
+    .facts-text {
+        font-size: 12px;
+    }
+    
+    .console-count {
+        font-size: 14px;
+    }
+    
+    .contact-form-container {
+        padding: 15px;
+    }
+    
+    .form-label {
+        font-size: 14px;
+    }
+    
+    .contact-input {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .contact-submit-btn {
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+    
+    .form-message {
+        padding: 10px 12px;
+    }
+    
+    .form-message p {
+        font-size: 13px;
+    }
+    .author-text {
+        font-size: 12px;
+    }
+}
